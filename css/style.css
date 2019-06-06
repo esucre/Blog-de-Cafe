@@ -3,7 +3,7 @@ html {
     font-size: 62.5%; /*1 rem = 10px*/
 }
 *, *:before, *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 body{
     font-family: 'Open Sans', sans-serif;
@@ -15,6 +15,7 @@ body{
 
 .contenedor{
     max-width: 120rem;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -28,14 +29,16 @@ h1{
 
 h2{
     font-size: 4rem;
+    line-height: 4.5rem;
 }
 
 h3{
-    max-width: 3.2rem;
+    font-size: 3.2rem;
 }
 
 h4{
-    max-width: 2.8rem;
+    font-size: 2.8rem;
+    line-height: 4rem;
 }
 img{
     max-width: 100%;
@@ -48,6 +51,10 @@ img{
 
 .no-margin{
     margin: 0;
+}
+
+.seccion{
+    margin-bottom: 2rem;
 }
 
 /*Header*/
@@ -115,4 +122,68 @@ img{
 
 .texto-header p{
     font-size: 2.2rem;
+}
+
+/*COntenido Principal HOME*/
+
+.contenido-principal{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog,
+.cursos{
+    flex: 0 0 100%;
+}
+
+.cursos{
+    order: -1;
+}
+
+.entrada-blog{
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e1e1e1e1
+}
+
+.entrada-blog:last-of-type{
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .contenido-principal{
+        justify-content: space-between;
+    }
+    .blog{
+        flex-basis: 66.6%;
+        order: -1;
+    }
+    .cursos{
+        flex-basis: calc(33.3% - 3.5rem);
+    }
+}
+
+/*Cursos Side-Bar*/
+
+.cursos-lista{
+    padding: 0;
+    list-style: none;
+}
+
+.curso{
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #e1e1e1e1;
+}
+
+.curso:last-of-type{
+border: none;
+}
+
+.curso p{
+    font-family: 'PT Sans',sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.curso p span{
+font-weight: 400;
 }
